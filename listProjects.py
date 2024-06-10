@@ -5,7 +5,7 @@ import urllib3
 url = ""
 apiSuffix = "/api/components/search_projects?ps=500&p=1"
 
-rawData = urllib3.urlopen(url & apiSuffix)
+rawData = urllib3.urlopen(url + apiSuffix)
 parseData = rawData.read()
 dictData = json.loads(parseData)
 for i in range(100):
